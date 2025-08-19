@@ -4,8 +4,7 @@
     <div class="data">
       <h2>{{ name }}</h2>
       <p>
-        <span class="filled" v-for="r in fillStarts">★</span>
-        <span class="empty" v-for="r in emptyStarts">☆</span>
+        <Rating :rate="rating" />
       </p>
       <p>{{ car.model }} - {{ car.licensePlate }}</p>
     </div>
@@ -14,23 +13,15 @@
 
 <script setup>
 import { computed } from "vue";
-
-
+import Rating from "./Rating.vue";
 
 const props = defineProps({
   name: String,
   rating: Number,
   img: String,
-  car: Object
+  car: Object,
 });
 
-const fillStarts = computed(() => {
-  return Math.round(props.rating);
-});
-
-const emptyStarts = computed(() => {
-  return 5 - fillStarts.value;
-});
 </script>
 
 <style scoped>
@@ -51,11 +42,4 @@ const emptyStarts = computed(() => {
   border-radius: 100%;
 }
 
-.filled {
-  color: white;
-}
-
-.empty {
-  color: #ccc;
-}
 </style>
