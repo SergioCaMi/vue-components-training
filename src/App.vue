@@ -2,6 +2,10 @@
 import IdCard from "./components/IdCard.vue";
 import Random from "./components/Random.vue";
 import BoxColor from "./components/BoxColor.vue";
+import CreditCard from "./components/CreditCard.vue";
+import Rating from "./components/Rating.vue";
+import DriverCard from "./components/DriverCard.vue";
+import LikeButton from "./components/LikeButton.vue";
 </script>
 
 <template>
@@ -19,10 +23,47 @@ import BoxColor from "./components/BoxColor.vue";
   <h2>Iteration 3 | Component: BoxColor</h2>
   <BoxColor :r="255" :g="0" :b="0" />
   <BoxColor :r="128" :g="255" :b="0" />
+
+  <h2>Iteration 4 | Component: CreditCard</h2>
+  <div class="container">
+    <CreditCard type="Visa" number="0123456789018845" :expiration-month="3" :expiration-year="2021" bank="BNP" owner="Maxence Bouret" bg-color="#11aa99" color="white" />
+    <CreditCard type="Master Card" number="0123456789010995" :expiration-month="3" :expiration-year="2021" bank="N26" owner="Maxence Bouret" bg-color="#eeeeee" color="#222222" />
+    <CreditCard type="Visa" number="0123456789016984" :expiration-month="12" :expiration-year="2019" bank="Name of the Bank" owner="Firstname Lastname" bg-color="#ddbb55" color="white" />
+  </div>
+
+  <h2>Iteration 5 | Component: Rating</h2>
+  <Rating :rate="0" />
+  <Rating :rate="1.49" />
+  <Rating :rate="1.5" />
+  <Rating :rate="3" />
+  <Rating :rate="4" />
+  <Rating :rate="5" />
+
+  <h2>Iteration 6 | Component: DriverCard</h2>
+  <DriverCard
+    name="Travis Kalanick"
+    :rating="4.2"
+    img="https://si.wsj.net/public/resources/images/BN-TY647_37gql_OR_20170621052140.jpg?width=620&height=428"
+    :car="{ model: 'Toyota Corolla Altis', licensePlate: 'CO42DE' }"
+  />
+
+  <DriverCard
+    name="Dara Khosrowshahi"
+    :rating="4.9"
+    img="https://ubernewsroomapi.10upcdn.com/wp-content/uploads/2017/09/Dara_ELT_Newsroom_1000px.jpg"
+    :car="{ model: 'Audi A3', licensePlate: 'BE33ER' }"
+  />
+
+  <h2>Iteration 7 | State: LikeButton</h2>
+  <LikeButton />
 </template>
 
 <style scoped>
 h2 {
   margin: 3rem 0;
+}
+
+div .container {
+  display: flex;
 }
 </style>

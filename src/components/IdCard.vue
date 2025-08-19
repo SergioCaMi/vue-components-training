@@ -6,7 +6,7 @@
         <div><strong>Last name:</strong> {{ lastName }}</div>
         <p><strong>Gender:</strong> {{ gender }}</p>
         <p><strong>Height:</strong> {{ height/100 }} m</p>
-        <p><strong>Birth:</strong> {{ birth.toLocaleDateString() }}</p>
+        <p><strong>Birth:</strong> {{ birth.toDateString() }}</p>
     </div>
   </div>
 </template>
