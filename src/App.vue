@@ -6,6 +6,10 @@ import CreditCard from "./components/CreditCard.vue";
 import Rating from "./components/Rating.vue";
 import DriverCard from "./components/DriverCard.vue";
 import LikeButton from "./components/LikeButton.vue";
+import ClickablePicture from "./components/ClickablePicture.vue";
+import Dice from "./components/Dice.vue";
+import Carousel from "./components/Carousel.vue";
+import NumbersTable from "./components/NumbersTable.vue";
 </script>
 
 <template>
@@ -55,7 +59,29 @@ import LikeButton from "./components/LikeButton.vue";
   />
 
   <h2>Iteration 7 | State: LikeButton</h2>
-  <LikeButton />
+  <div class="container">
+    <LikeButton />
+    <LikeButton />
+  </div>
+
+  <h2>Iteration 8: State: ClickablePicture</h2>
+  <ClickablePicture img="maxence.png" img-clicked="maxence-glasses.png" />
+
+  <h2>Iteration 9 | State: Dice</h2>
+  <Dice />
+
+  <h2>Iteration 10 | State: Carousel</h2>
+  <Carousel
+    :images="[
+      'https://randomuser.me/api/portraits/women/1.jpg',
+      'https://randomuser.me/api/portraits/men/1.jpg',
+      'https://randomuser.me/api/portraits/women/2.jpg',
+      'https://randomuser.me/api/portraits/men/2.jpg',
+    ]"
+  />
+
+  <h2>Iteration 11 | List and Keys | NumbersTable</h2>
+  <NumbersTable :limit="12" />
 </template>
 
 <style scoped>

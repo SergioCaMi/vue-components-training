@@ -15,6 +15,7 @@ const counter = ref(0);
 const color = ref('gray'); 
 
 const btnColor = () => {
+  
   return colores[Math.floor(Math.random() * colores.length)];
 };
 
@@ -25,7 +26,8 @@ const countLikes = () => {
 
 <style scoped>
 button {
-    padding: 2rem 3rem;
+    margin: 1rem;
+    padding: 1rem 2rem;
     font-size: 30px;
 }
 </style>

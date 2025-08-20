@@ -15,18 +15,6 @@ import { computed } from 'vue';
 import visaImg from '../assets/images/visa.png'
 import masterImg from '../assets/images/master-card.svg'
 
-const tipo = computed(()=>{
-    return props.type == 'Visa' ? visaImg : masterImg 
-})
-
-function ocultar(str) {
-    str = String(str);
-    const ultimos = str.slice(-4);
-    const ocultos = '*'.repeat(str.length - 4);
-    const resultado = ocultos + ultimos;
-    return resultado.replace(/(.{4})/g, '$1 ').trim();
-}
-
 const props = defineProps({
   type: {
     type: String,
@@ -43,6 +31,19 @@ const props = defineProps({
   bgColor: String,
   color: String,
 });
+
+const tipo = computed(()=>{
+    return props.type == 'Visa' ? visaImg : masterImg 
+})
+
+function ocultar(str) {
+    str = String(str);
+    const ultimos = str.slice(-4);
+    const ocultos = '*'.repeat(str.length - 4);
+    const resultado = ocultos + ultimos;
+    return resultado.replace(/(.{4})/g, '$1 ').trim();
+}
+
 </script>
 
 <style scoped>
