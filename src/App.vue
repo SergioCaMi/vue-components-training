@@ -10,6 +10,7 @@ import ClickablePicture from "./components/ClickablePicture.vue";
 import Dice from "./components/Dice.vue";
 import Carousel from "./components/Carousel.vue";
 import NumbersTable from "./components/NumbersTable.vue";
+import FaceBook from "./components/FaceBook.vue";
 </script>
 
 <template>
@@ -82,6 +83,9 @@ import NumbersTable from "./components/NumbersTable.vue";
 
   <h2>Iteration 11 | List and Keys | NumbersTable</h2>
   <NumbersTable :limit="12" />
+
+  <h2>Iteration 12 | List and Keys - FaceBook (Simple)</h2>
+  <FaceBook />
 </template>
 
 <style scoped>
@@ -89,7 +93,7 @@ h2 {
   margin: 3rem 0;
 }
 
-div .container {
+div.container {
   display: flex;
 }
 </style>

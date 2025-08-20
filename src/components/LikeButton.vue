@@ -10,7 +10,6 @@
 import { ref } from "vue";
 
 const colores = ['purple', 'blue', 'green', 'yellow', 'orange', 'red'];
-
 const counter = ref(0);
 const color = ref('purple'); 
 const indexColor = ref(0)

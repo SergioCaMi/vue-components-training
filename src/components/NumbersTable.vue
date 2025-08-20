@@ -1,6 +1,6 @@
 <template>
-  <div  class="container">
-    <div v-for="n in limit":key="n"class="box" :class="n % 2 === 0 ? 'red' : 'white'">{{ n }}</div>
+  <div class="containerGrid">
+    <div v-for="n in limit" :key="n" class="box" :class="n % 2 === 0 ? 'red' : 'white'">{{ n }}</div>
   </div>
 </template>
 
@@ -11,8 +11,10 @@ const props = defineProps({
 </script>
 
 <style scoped>
-.container {
-  display: flex;
+
+div.containerGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 60px);
 }
 
 .box {
@@ -33,3 +35,4 @@ const props = defineProps({
   background-color: white;
 }
 </style>
+

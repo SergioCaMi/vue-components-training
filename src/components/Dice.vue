@@ -15,9 +15,10 @@ import dice6 from '../assets/images/dice6.png'
 import diceEmpty from '../assets/images/dice-empty.png'
 
 const diceImages = [dice1, dice2, dice3, dice4, dice5, dice6]
-const dice = ref()
+const dice = ref(null)
 const diceRoll = () => {
     dice.value = diceEmpty
+    //TODO: Limpiar el setTimeout para que se quede sólo con la última tirada
     setTimeout(() => {
         const randomIndex = Math.floor(Math.random() * diceImages.length)
         dice.value = diceImages[randomIndex]
