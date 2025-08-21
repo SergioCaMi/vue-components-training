@@ -19,9 +19,9 @@ const rValue = ref(0)
 const gValue = ref(0)
 const bValue = ref(0)
 const updateColor = (color, value) => {
-    if (color === 'r') rValue.value = value;
-    else if (color === 'g') gValue.value = value;
-    else if (color === 'b') bValue.value = value;
+    if (color == 'r') rValue.value = value;
+    else if (color == 'g') gValue.value = value;
+    else if (color == 'b') bValue.value = value;
 }
 
 

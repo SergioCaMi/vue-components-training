@@ -10,7 +10,7 @@
 const props = defineProps({
   color: String,
   value: Number,
-//   onchange: Function,
+//   onchange: Function, ??
 });
 
 defineEmits({
