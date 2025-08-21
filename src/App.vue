@@ -84,7 +84,7 @@ import FaceBook from "./components/FaceBook.vue";
   <h2>Iteration 11 | List and Keys | NumbersTable</h2>
   <NumbersTable :limit="12" />
 
-  <h2>Iteration 12 | List and Keys - FaceBook (Simple)</h2>
+  <h2>Iteration 12-13 | List and Keys - FaceBook </h2>
   <FaceBook />
 </template>
 
