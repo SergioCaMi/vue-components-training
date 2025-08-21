@@ -11,9 +11,20 @@ import Dice from "./components/Dice.vue";
 import Carousel from "./components/Carousel.vue";
 import NumbersTable from "./components/NumbersTable.vue";
 import FaceBook from "./components/FaceBook.vue";
+import SignupPage from "./components/SignupPage.vue";
+import KeyButton from "./components/KeyButton.vue";
+// Ejemplo
+import { ref } from "vue";
+import RGBColorPicker from "./components/RGBColorPicker.vue";
+const textFromUser = ref("");
+const handleKeyPress = (keyPressed) => {
+  textFromUser.value += keyPressed;
+};
 </script>
 
 <template>
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css" />
+
   <h1>Creación de componentes con Vue</h1>
   <p>Crea a conitnuación todos los componentes del ejercicio.</p>
 
@@ -84,8 +95,20 @@ import FaceBook from "./components/FaceBook.vue";
   <h2>Iteration 11 | List and Keys | NumbersTable</h2>
   <NumbersTable :limit="12" />
 
-  <h2>Iteration 12-13 | List and Keys - FaceBook </h2>
+  <h2>Iteration 12-13 | List and Keys - FaceBook</h2>
   <FaceBook />
+
+  <h2>Iteration 14 | Form - SignupPage</h2>
+  <SignupPage />
+
+  <h2>Ejemplo de un hijo que emite eventos al padre</h2>
+  <KeyButton @press="handleKeyPress" label="A" />
+  <KeyButton @press="handleKeyPress" label="B" />
+  <label for="">Texto escrito por el usuario:</label>
+  <input v-model="textFromUser" type="text" />
+
+  <h2>Iteration 15 | Lifting State Up - RGBColorPicker</h2>
+  <RGBColorPicker />
 </template>
 
 <style scoped>

@@ -75,7 +75,6 @@ const filterProfiles = computed(() => {
 
 .data {
   margin: 1rem;
-  color: ;
 }
 
 img {
