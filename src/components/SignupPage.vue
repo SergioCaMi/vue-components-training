@@ -23,6 +23,7 @@
         v-model="password"
         :style="{ borderColor: !validateForm ? 'transparent' : estatePass === 0 ? 'red' : 'green' }"
       />
+      <small>Password must be 8–12 characters, include a number, uppercase letter, and symbol.</small>
       <p class="msgPass"><span v-if="validateForm && estatePass === 1" class="icon success">✓</span> <span v-else-if="validateForm && estatePass === 0" class="icon error">✗</span>{{ msgPass }}</p>
 
       <label for="nationality">Nationality</label>
@@ -61,13 +62,12 @@ const signUp = () => {
   validateForm.value = true;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email.value)) {
-    msg.value = "No es un email valido";
+    msg.value = "Is not a valid email";
     estateEmail.value = 0;
   } else {
-    msg.value = "Es un email valido";
+    msg.value = "Is a valid email";
     estateEmail.value = 1;
   }
-
   let strength = 0;
   //  longitud
   if (password.value.length >= 8 && password.value.length <= 12) {
@@ -109,10 +109,10 @@ const signUp = () => {
   }
 
   if (nationality.value == "") {
-    msgNationality.value = "TNationality NO";
+    msgNationality.value = "Please select a nationality";
     estateNationality.value = 0;
   } else {
-    msgNationality.value = "OK";
+    msgNationality.value = "Nationality selected";
     estateNationality.value = 1;
   }
 };
